@@ -5,6 +5,7 @@ const config = require("./config.json");
 
 client.config = config;
 
+// Event Handler
 fs.readdir("./events", (err, files) => {
     if (err) return console.error(err);
     files.forEach(file => {
@@ -14,6 +15,7 @@ fs.readdir("./events", (err, files) => {
     });
 });
 
+/Command Handler
 client.commands = new Discord.Collection();
 fs.readdir("./commands/", (err, files) => {
     if (err) return console.error(err);
@@ -25,9 +27,9 @@ fs.readdir("./commands/", (err, files) => {
       client.commands.set(commandName, props);
     });
 });
-// graceful shutdown :)
+// Shut Down (CTRL + C)
 process.on( "SIGINT", function() {
-	console.log("\nShutting down :c")
+	console.log("\nShutting down")
 	client.destroy()
 	process.exit()
 })
