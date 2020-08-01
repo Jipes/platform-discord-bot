@@ -1,6 +1,6 @@
 {
-    "token": "AddTokenHere",
-    "ownerid": "UrOwnerIDHere",
-    "prefix": "!"
+    "token": "BotsToken",
+    "ownerid": "DevelopersID",
+    "prefix": "BotsPrefix"
     
 }
