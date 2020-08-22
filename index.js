@@ -15,7 +15,7 @@ fs.readdir("./events", (err, files) => {
     });
 });
 
-/Command Handler
+// Command Handler
 client.commands = new Discord.Collection();
 fs.readdir("./commands/", (err, files) => {
     if (err) return console.error(err);
